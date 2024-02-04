@@ -1,13 +1,12 @@
 {
-  "name": "@repo/ui",
+  "name": "@repo/viz",
   "version": "0.0.0",
   "sideEffects": [
     "**/*.css"
   ],
   "exports": {
     "./styles.css": "./dist/index.css",
-    "./container": "./src/container.tsx",
-    "./card": "./src/card.tsx"
+    "./bar": "./src/bar.tsx"
   },
   "license": "MIT",
   "scripts": {
@@ -16,12 +15,9 @@
     "dev": "tailwindcss -i ./src/styles.css -o ./dist/index.css --watch",
     "type-check": "tsc --noEmit"
   },
-  "peerDependencies": {
-    "react": "^18.2.0"
-  },
   "dependencies": {
-    "clsx": "^2.1.0",
-    "tailwind-merge": "^2.2.1"
+    "@repo/ui": "workspace:*",
+    "@nivo/bar": "^0.84.0"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
